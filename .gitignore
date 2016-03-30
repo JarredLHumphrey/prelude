@@ -21,3 +21,5 @@ session*
 .cask
 tramp
 /var/pcache
+cider-history
+saved-places
