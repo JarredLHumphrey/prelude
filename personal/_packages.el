@@ -2,6 +2,7 @@
  '(bookmark+
    clojure-mode
    cider
+   clj-refactor
    coffee-mode
    haml-mode
    idle-highlight-mode

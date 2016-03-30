@@ -33,7 +33,7 @@
 ;;; Code:
 
 (require 'prelude-lisp)
-(prelude-require-packages '(clojure-mode cider))
+(prelude-require-packages '(clojure-mode cider clj-refactor))
 
 (eval-after-load 'clojure-mode
   '(progn
@@ -41,10 +41,19 @@
        (subword-mode +1)
        (run-hooks 'prelude-lisp-coding-hook))
 
+     (defun clj-refactor-mode-defaults ()
+       (clj-refactor-mode 1)
+       (yas-minor-mode 1) ; for adding require/use/import statements
+       ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+       (cljr-add-keybindings-with-prefix "C-c C-m"))
+
      (setq prelude-clojure-mode-hook 'prelude-clojure-mode-defaults)
+     (setq clj-refactor-mode-hook 'clj-refactor-mode-defaults)
 
      (add-hook 'clojure-mode-hook (lambda ()
-                                    (run-hooks 'prelude-clojure-mode-hook)))))
+                                    (run-hooks 'prelude-clojure-mode-hook)))
+     (add-hook 'clojure-mode-hook (lambda ()
+                                    (run-hooks 'clj-refactor-mode-hook)))))
 
 (eval-after-load 'cider
   '(progn
