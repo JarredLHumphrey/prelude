@@ -1,8 +1,7 @@
 ;;; package --- Personal Configuration of Jarred Humphrey
 ;;; Commentary:
-;;;   Personal emacs initialization
+;;;   Personal Emacs initialization
 ;;;
-
 
 ;;; Code:
 
@@ -11,3 +10,8 @@
 
 ;; Turn off scroll bars
 (scroll-bar-mode -1)
+
+(toggle-frame-maximized)
+
+(provide '_init)
+;;; _init.el ends here
