@@ -18,8 +18,9 @@
 (defun cleanup-buffer ()
   "Perform a bunch of operations on the whitespace content of a buffer."
   (interactive)
-  (indent-buffer)
-  (untabify-buffer)
+  (when (eq major-mode 'clojure-mode)
+    (indent-buffer)
+    (untabify-buffer))
   (delete-trailing-whitespace))
 
 ;; Highlight special tags in files

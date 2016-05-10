@@ -26,9 +26,6 @@
 ;; Try to keep lines short
 (auto-fill-mode t)
 
-;; Utilize a visual bell rather than noise
-(setq visible-bell t)
-
 ;; Cleanup buffer whenever before we save
 (add-hook 'before-save-hook 'cleanup-buffer)
 

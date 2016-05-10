@@ -10,10 +10,12 @@
 (prelude-install-search-engine "clojuredocs" "http://www.clojuredocs.org/search?q=" "ClojureDocs: ")
 
 (defvar default-tabs)
-(setq default-tabs '(;;Calendar
+(setq default-tabs '(;;Inbox
+                     "https://www.inbox.google.com/"
+                     ;;Calendar
                      "https://www.google.com/calendar/"
-                     ;;Jira
-                     "https://adaptly-go.atlassian.net/secure/Dashboard.jspa"
+                     ;;Redmine
+                     "https://https://redmine.adaptly.com/"
                      ;;Github
                      "https://github.com/"
                      ;;Prelude keymappings (until I actually learn them)
