@@ -6,6 +6,7 @@
    coffee-mode
    haml-mode
    idle-highlight-mode
+   markdown-mode
    paredit
    rainbow-delimiters
    rainbow-mode
