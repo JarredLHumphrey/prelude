@@ -23,3 +23,6 @@ tramp
 /var/pcache
 cider-history
 saved-places
+.emacs.desktop
+.emacs.desktop.lock
+network-security.data
